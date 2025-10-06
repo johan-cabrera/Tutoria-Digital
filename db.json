@@ -1,0 +1,229 @@
+{
+    "usuarios": [
+        {
+        "id_usuario": 1,
+        "nombre_completo": "Mayerlyn Escobar",
+        "correo_electronico": "mayerlynescobar@gmail.com",
+        "carnet": "EU230000",
+        "contrasena": "123456",
+        "foto_perfil": "user01.png",
+        "rol": "tutor"
+        },
+        {
+        "id_usuario": 2,
+        "nombre_completo": "Johan Francisco Cabrera Elias",
+        "correo_electronico": "johancabrera486@gmail.com",
+        "carnet": "CE223187",
+        "contrasena": "123456",
+        "foto_perfil": "user01.png",
+        "rol": "docente"
+        }
+    ],
+    "sesiones": [
+        {
+        "id_sesion": 101,
+        "materia": "Cálculo I",
+        "grupos": "8",
+        "estudiantes_activos": 35,
+        "dia": "Lunes",
+        "hora": "13:00 p.m. - 15:00 p.m.",
+        "aula": "B-201",
+        "docente": "Dr. Martínez",
+        "estado": "activa",
+        "id_tutor": 1  
+        },
+        {
+        "id_sesion": 102,
+        "materia": "Programación Avanzada",
+        "grupos": "4",
+        "estudiantes_activos": 22,
+        "dia": "Miércoles",
+        "hora": "09:30 a.m. - 11:30 a.m.",
+        "aula": "Lab 5",
+        "docente": "Ing. Pérez",
+        "estado": "activa",
+        "id_tutor": 1  
+        },
+        {
+        "id_sesion": 103,
+        "materia": "Física Moderna",
+        "grupos": "2",
+        "estudiantes_activos": 15,
+        "dia": "Domingo",
+        "hora": "18:30",
+        "aula": "C-100",
+        "docente": "Otra Persona",
+        "estado": "inactiva",
+        "id_tutor": 1  
+        }
+    ],
+    "asistencias": [
+        {
+        "id_asistencia": 1000,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1002,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1003,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1004,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1005,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1006,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1007,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1008,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1009,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1010,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1011,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1012,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1013,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1014,
+        "fecha": "2025-10-05",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 101 
+        },
+        {
+        "id_asistencia": 1015,
+        "fecha": "2025-10-12",
+        "hora": "14:05:00",
+        "nombre_estudiante": "Carlos Ruiz Gómez",
+        "carrera": "Ingeniería de Sistemas",
+        "correo": "carlos.ruiz@mail.com",
+        "telefono": "555-1234",
+        "id_sesion": 102 
+        }
+        
+    ],
+    "notificaciones": [
+        {
+        "id_notificacion": 50,
+        "titulo": "Cambio de Aula",
+        "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-300.",
+        "fecha": "2025-10-05",
+        "hora": "18:30:00",
+        "id_remitente": 1 
+        }
+    ],
+    "destinatarios": [
+        {
+        "id_notificacion": 50, 
+        "id_destinatario": 2  
+        }
+    ]
+}

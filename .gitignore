@@ -1,0 +1,5 @@
+# Directorio de módulos de Node
+/node_modules
+# Archivos de caché del SO y logs
+npm-debug.log
+.DS_Store
