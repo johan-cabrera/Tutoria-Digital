@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // 📢 CAMBIO CLAVE: Obtener TODAS las sesiones
-            const allSessionsResponse = await fetch('http://localhost:3000/sesiones');
+            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const allSessionsResponse = await fetch(`${API_BASE_URL}/sesiones`); 
             
             if (!allSessionsResponse.ok) {
                 throw new Error("Error de red al obtener la lista completa de sesiones.");

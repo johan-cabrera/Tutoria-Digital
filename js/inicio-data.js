@@ -37,9 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // 1. Obtener todas las sesiones y asistencias
             // Se necesitan las sesiones para saber qué asistencias corresponden al tutor.
+            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+
+            // 1. Obtener todas las sesiones y asistencias
             const [sessionsRes, attendanceRes] = await Promise.all([
-                fetch('http://localhost:3000/sesiones'),
-                fetch('http://localhost:3000/asistencias')
+                fetch(`${API_BASE_URL}/sesiones`), // Usamos la URL base aquí
+                fetch(`${API_BASE_URL}/asistencias`) // Y aquí
             ]);
 
             if (!sessionsRes.ok || !attendanceRes.ok) {

@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchUsers() {
         try {
             // Ruta a database/usuarios.json, relativa al index.html
-            const response = await fetch('http://localhost:3000/usuarios'); 
+            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const response = await fetch(`${API_BASE_URL}/usuarios`);
             if (!response.ok) {
                 throw new Error(`Error al cargar los usuarios: ${response.statusText}`);
             }

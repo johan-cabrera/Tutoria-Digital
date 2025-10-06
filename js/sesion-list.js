@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 1. Obtener todos los registros de asistencia
-            const response = await fetch('http://localhost:3000/asistencias'); 
+            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const response = await fetch(`${API_BASE_URL}/asistencias`);
             
             if (!response.ok) {
                 throw new Error("Error de red al obtener el historial de asistencias.");

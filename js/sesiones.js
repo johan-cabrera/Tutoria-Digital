@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // Cargar las sesiones desde el servidor JSON Server
-            const response = await fetch('http://localhost:3000/sesiones'); 
+            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const response = await fetch(`${API_BASE_URL}/sesiones`);
             
             if (!response.ok) {
                 throw new Error(`Error de red al conectar con la API (JSON Server): ${response.statusText}`);
