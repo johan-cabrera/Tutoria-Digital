@@ -213,7 +213,7 @@
     {
       "id": "50",
       "titulo": "Cambio de Aula",
-      "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-300.",
+      "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-200.",
       "fecha": "2025-09-10",
       "hora": "19:30:00",
       "estado": "visto",
@@ -233,7 +233,7 @@
     {
       "id": "52",
       "titulo": "Cambio de Aula",
-      "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-300.",
+      "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-400.",
       "fecha": "2025-10-05",
       "hora": "18:30:00",
       "estado": "visto",
@@ -241,11 +241,21 @@
       "id_emisor": 2
     },
     {
-      "id": "52",
+      "id": "53",
       "titulo": "Cambio de Aula",
-      "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-300.",
-      "fecha": "2025-10-05",
+      "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-500.",
+      "fecha": "2025-10-06",
       "hora": "18:30:00",
+      "estado": "entregado",
+      "id_destinatario": 1,
+      "id_emisor": 2
+    },
+    {
+      "id": "54",
+      "titulo": "Cambio de Aula",
+      "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-600.",
+      "fecha": "2025-10-07",
+      "hora": "07:30:00",
       "estado": "entregado",
       "id_destinatario": 1,
       "id_emisor": 2
