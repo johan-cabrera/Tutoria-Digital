@@ -1,6 +1,6 @@
 // Asegúrate de que esta función existe o ajusta la lógica si ya tienes un DOMContentLoaded
 // 📢 URL base de la API. ¡Necesaria para la llamada de notificaciones!
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://tutoria-digital.onrender.com';
  // Asegúrate de que esta URL es correcta.
 
 async function updateNotificationBadge(userId) {
