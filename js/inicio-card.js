@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createSessionCard(session, nextDate) {
         // La estructura de la tarjeta que tenías en el HTML
         return `
-            <div class="bg-white p-7 rounded-lg shadow-sm border cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:border-primary-blue" data-id="${session.id_sesion}">
+            <div class="bg-white p-7 rounded-lg shadow-sm border cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:border-primary-blue" data-id="${session.id}">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-xl font-semibold text-text-dark">${session.materia}</h3>
                     <span class="text-md text-text-dark">${nextDate}</span>
@@ -97,17 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadUserSessions(userId) {
         try {
             // 1. Cargar el JSON de sesiones
-            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const API_BASE_URL = 'http://localhost:3000';
             const response = await fetch(`${API_BASE_URL}/sesiones`); 
             if (!response.ok) {
                 throw new Error(`Error al cargar sesiones: ${response.statusText}`);
             }
             const allSessions = await response.json();
-
+            
             // 2. Filtrar las sesiones por el id_tutor
             const userSessions = allSessions.filter(session => 
-                session.id_tutor === userId && session.estado === 'activa');
-
+                session.id_tutor == userId && session.estado == 'activa');
+            
+            
             if (userSessions.length === 0) {
                 sessionsContainer.innerHTML = '<p class="text-lg text-text-light">No tienes sesiones programadas próximamente.</p>';
                 return;

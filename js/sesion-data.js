@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // 📢 CAMBIO CLAVE: Obtener TODAS las sesiones
-            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const API_BASE_URL = 'http://localhost:3000';
             const allSessionsResponse = await fetch(`${API_BASE_URL}/sesiones`); 
             
             if (!allSessionsResponse.ok) {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const allSessions = await allSessionsResponse.json();
 
             // 📢 FILTRADO CLAVE: Buscar la sesión por ID en el cliente
-            const session = allSessions.find(s => s.id_sesion === targetId);
+            const session = allSessions.find(s => s.id == targetId);
 
             if (!session) {
                 displayError(`Sesión con ID ${targetId} no encontrada en la base de datos.`);

@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionSelect.disabled = true;
 
         try {
-            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const API_BASE_URL = 'http://localhost:3000';
             const response = await fetch(`${API_BASE_URL}/sesiones`); 
             
             if (!response.ok) throw new Error("Error al cargar la lista de sesiones.");
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Filtrar sesiones por ID de tutor y estado 'activa'
             const activeUserSessions = allSessions.filter(session => 
-                session.id_tutor === userId && session.estado === 'activa'
+                session.id_tutor == userId && session.estado == 'activa'
             );
 
             // 2. Generar el HTML de las opciones
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 optionsHtml = '<option value="" disabled selected>Seleccione una sesión...</option>';
                 activeUserSessions.forEach(session => {
                     // Usamos el id_sesion como valor para identificarlo en la URL
-                    optionsHtml += `<option value="${session.id_sesion}">${session.materia}</option>`;
+                    optionsHtml += `<option value="${session.id}">${session.materia}</option>`;
                 });
                 sessionSelect.disabled = false;
                 generateButton.disabled = false; // Habilitar botón si hay sesiones

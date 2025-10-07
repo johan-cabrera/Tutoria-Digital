@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // 1. Obtener todas las sesiones y asistencias
             // Se necesitan las sesiones para saber qué asistencias corresponden al tutor.
-            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const API_BASE_URL = 'http://localhost:3000';
 
             // 1. Obtener todas las sesiones y asistencias
             const [sessionsRes, attendanceRes] = await Promise.all([
@@ -54,19 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 2. Identificar las IDs de las sesiones que pertenecen a este tutor
             const userSessionIds = allSessions
-                .filter(s => s.id_tutor === userId)
-                .map(s => s.id_sesion);
+                .filter(s => s.id_tutor == userId)
+                .map(s => parseInt(s.id));
 
+                console.log(userSessionIds);
+                console.log(allAttendance);
             // 3. Filtrar todas las asistencias para obtener solo las del tutor
             const userAttendanceRecords = allAttendance.filter(a => 
                 userSessionIds.includes(a.id_sesion)
             );
-
             // --- CÁLCULO DE KPIS CON LA NUEVA LÓGICA ---
 
             // 1. Tutorías Impartidas (Cada fecha ÚNICA con asistencia)
             // Usamos un Set para obtener solo las fechas únicas de la asistencia del tutor.
             const uniqueDates = new Set(userAttendanceRecords.map(a => a.fecha));
+            
             const totalSessionsCount = uniqueDates.size;
 
             // 2. Estudiantes Atendidos (Cantidad TOTAL de asistencias registradas)

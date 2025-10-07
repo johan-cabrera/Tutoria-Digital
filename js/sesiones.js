@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="bg-white p-7 rounded-lg shadow-md border cursor-pointer 
                 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:border-primary-blue hover:translate-y-[-2px]" 
-                data-id="${session.id_sesion}">
+                data-id="${session.id}">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-xl font-semibold text-text-dark">${session.materia}</h3>
                     <span class="text-md text-text-dark">${nextDate}</span>
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createInactiveSessionCard(session) {
         // Nota: Las sesiones inactivas NO necesitan el efecto hover ni la fecha de "próximo" día.
         return `
-            <div class="bg-gray-100 p-7 rounded-lg shadow-sm border" data-id="${session.id_sesion}">
+            <div class="bg-gray-100 p-7 rounded-lg shadow-sm border" data-id="${session.id}">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-xl font-semibold text-text-light">${session.materia}</h3>
                     <span class="text-md text-text-dark">Finalizado</span>
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // Cargar las sesiones desde el servidor JSON Server
-            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const API_BASE_URL = 'http://localhost:3000';
             const response = await fetch(`${API_BASE_URL}/sesiones`);
             
             if (!response.ok) {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const allSessions = await response.json();
             
             // 1. Filtrar sesiones por el ID del tutor
-            const userSessions = allSessions.filter(session => session.id_tutor === currentUserId);
+            const userSessions = allSessions.filter(session => session.id_tutor == currentUserId);
 
             // 2. Dividir en ACTIVAS e INACTIVAS
             const activeSessions = userSessions.filter(session => session.estado === 'activa');

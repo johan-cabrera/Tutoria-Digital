@@ -1,4 +1,50 @@
 // Asegúrate de que esta función existe o ajusta la lógica si ya tienes un DOMContentLoaded
+// 📢 URL base de la API. ¡Necesaria para la llamada de notificaciones!
+const API_BASE_URL = 'http://localhost:3000'; // Asegúrate de que esta URL es correcta.
+
+async function updateNotificationBadge(userId) {
+    // 1. Obtener referencias a los contadores
+    const desktopBadge = document.getElementById('desktop-notification-count');
+    const mobileBadge = document.getElementById('mobile-notification-count');
+
+    // 2. Si no existen los badges, no hacemos nada
+    if (!desktopBadge && !mobileBadge) return;
+
+    try {
+        // 3. Consultar solo las notificaciones "entregado" (sin leer) del usuario actual
+        // JSON Server permite usar query parameters (id_destinatario y estado)
+        const response = await fetch(`${API_BASE_URL}/notificaciones?id_destinatario=${userId}&estado=entregado`);
+        
+        if (!response.ok) throw new Error('Error al obtener el conteo de notificaciones');
+        
+        const unreadNotifications = await response.json();
+        const unreadCount = unreadNotifications.length;
+
+        // 4. Actualizar ambos badges (Escritorio y Móvil)
+        const updateBadge = (badgeElement) => {
+            if (badgeElement) {
+                if (unreadCount > 0) {
+                    // Mostrar el badge con el conteo
+                    badgeElement.textContent = unreadCount;
+                    badgeElement.style.display = 'flex'; // O 'block', dependiendo de tu layout
+                } else {
+                    // Ocultar el badge
+                    badgeElement.style.display = 'none';
+                }
+            }
+        };
+
+        updateBadge(desktopBadge);
+        updateBadge(mobileBadge);
+
+    } catch (error) {
+        console.error("Fallo al actualizar el contador de notificaciones:", error);
+        // Ocultar el badge en caso de error para evitar mostrar información incorrecta
+        if (desktopBadge) desktopBadge.style.display = 'none';
+        if (mobileBadge) mobileBadge.style.display = 'none';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // Obtener las referencias al nuevo DOM
@@ -72,6 +118,9 @@ function loadNavbar() {
     if (sessionString) {
         try {
             const userData = JSON.parse(sessionString);
+
+            // Se asume que userData.id_usuario es el ID del destinatario
+            updateNotificationBadge(userData.id_usuario); 
             
             // 1. Cargar nombre y rol en el header
             if (userNameElement) userNameElement.textContent = userData.nombre_completo;
@@ -81,7 +130,7 @@ function loadNavbar() {
             if (profilePicContainer && userData.foto_perfil) {
                 
                 // Definir la ruta de la imagen
-                const imagePath = `../assets/profile_pics/${userData.foto_perfil}`;
+                const imagePath = `/assets/profile_pics/${userData.foto_perfil}`;
                 
                 // Crear la etiqueta de imagen
                 const imgElement = document.createElement('img');

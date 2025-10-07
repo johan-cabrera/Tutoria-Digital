@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchUsers() {
         try {
             // Ruta a database/usuarios.json, relativa al index.html
-            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const API_BASE_URL = 'http://localhost:3000';
             const response = await fetch(`${API_BASE_URL}/usuarios`);
             if (!response.ok) {
                 throw new Error(`Error al cargar los usuarios: ${response.statusText}`);
@@ -68,10 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (userFound) {
             // --- INICIO: Guardar datos de Sesión en localStorage ---
-            
             //Crear el objeto de la sesión
             const sessionData = {
-                id_usuario: userFound.id_usuario,
+                id_usuario: userFound.id,
                 nombre_completo: userFound.nombre_completo,
                 rol: userFound.rol,
                 foto_perfil: userFound.foto_perfil, 

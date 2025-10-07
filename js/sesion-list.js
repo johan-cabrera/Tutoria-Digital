@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 1. Obtener todos los registros de asistencia
-            const API_BASE_URL = 'https://tutoria-digital.onrender.com';
+            const API_BASE_URL = 'http://localhost:3000';
             const response = await fetch(`${API_BASE_URL}/asistencias`);
             
             if (!response.ok) {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const allAttendance = await response.json();
 
             // 2. Filtrar las asistencias por el id_sesion actual y guardarlas
-            allSessionAttendance = allAttendance.filter(record => record.id_sesion === sessionId);
+            allSessionAttendance = allAttendance.filter(record => record.id_sesion == sessionId);
 
             if (allSessionAttendance.length === 0) {
                 attendanceBody.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-text-light">No hay registros de asistencia para esta sesión.</td></tr>';
