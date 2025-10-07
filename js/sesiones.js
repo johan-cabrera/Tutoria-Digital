@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function createActiveSessionCard(session, nextDate) {
         return `
-            <div class="bg-white p-7 rounded-lg shadow-md border cursor-pointer 
+            <div class="bg-white p-7 rounded-lg shadow-sm border cursor-pointer 
                 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:border-primary-blue hover:translate-y-[-2px]" 
                 data-id="${session.id}">
                 <div class="flex justify-between items-start mb-4">

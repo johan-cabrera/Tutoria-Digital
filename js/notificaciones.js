@@ -159,7 +159,7 @@ async function loadUserNotifications() {
         userNotifications.forEach(n => {
             const timeSince = formatTimeSince(n.fecha, n.hora);
             const emisorData = usersMap[n.id_emisor] || { nombre_completo: 'Usuario Desconocido', foto_perfil: 'default.png' }; 
-            const emisorPhotoPath = `/assets/profile_pics/${emisorData.foto_perfil}`;
+            const emisorPhotoPath = `../assets/profile_pics/${emisorData.foto_perfil}`;
 
             const isUnread = n.estado === 'entregado'; 
             if (isUnread) unreadCount++; // Incrementar el contador

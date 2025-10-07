@@ -131,7 +131,7 @@ function loadNavbar() {
             if (profilePicContainer && userData.foto_perfil) {
                 
                 // Definir la ruta de la imagen
-                const imagePath = `/assets/profile_pics/${userData.foto_perfil}`;
+                const imagePath = `../assets/profile_pics/${userData.foto_perfil}`;
                 
                 // Crear la etiqueta de imagen
                 const imgElement = document.createElement('img');
