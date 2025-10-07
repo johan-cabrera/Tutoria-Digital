@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // 📢 CAMBIO CLAVE: Obtener TODAS las sesiones
-            const API_BASE_URL = 'http://localhost:3000';
+            
             const allSessionsResponse = await fetch(`${API_BASE_URL}/sesiones`); 
             
             if (!allSessionsResponse.ok) {

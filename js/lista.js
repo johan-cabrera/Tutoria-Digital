@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionSelect.disabled = true;
 
         try {
-            const API_BASE_URL = 'http://localhost:3000';
+            
             const response = await fetch(`${API_BASE_URL}/sesiones`); 
             
             if (!response.ok) throw new Error("Error al cargar la lista de sesiones.");

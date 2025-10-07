@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 1. Obtener todos los registros de asistencia
-            const API_BASE_URL = 'http://localhost:3000';
+            
             const response = await fetch(`${API_BASE_URL}/asistencias`);
             
             if (!response.ok) {

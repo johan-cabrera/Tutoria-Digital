@@ -1,6 +1,7 @@
 // Asegúrate de que esta función existe o ajusta la lógica si ya tienes un DOMContentLoaded
 // 📢 URL base de la API. ¡Necesaria para la llamada de notificaciones!
-const API_BASE_URL = 'http://localhost:3000'; // Asegúrate de que esta URL es correcta.
+const API_BASE_URL = 'http://localhost:3000';
+ // Asegúrate de que esta URL es correcta.
 
 async function updateNotificationBadge(userId) {
     // 1. Obtener referencias a los contadores

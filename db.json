@@ -226,7 +226,7 @@
       "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-300.",
       "fecha": "2025-10-05",
       "hora": "18:30:00",
-      "estado": "visto",
+      "estado": "entregado",
       "id_destinatario": 1,
       "id_emisor": 2
     },
@@ -236,7 +236,7 @@
       "mensaje": "La sesión de Cálculo I del lunes se traslada al aula B-300.",
       "fecha": "2025-10-05",
       "hora": "18:30:00",
-      "estado": "visto",
+      "estado": "entregado",
       "id_destinatario": 1,
       "id_emisor": 2
     }

@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // 1. Obtener todas las sesiones y asistencias
             // Se necesitan las sesiones para saber qué asistencias corresponden al tutor.
-            const API_BASE_URL = 'http://localhost:3000';
+            
 
             // 1. Obtener todas las sesiones y asistencias
             const [sessionsRes, attendanceRes] = await Promise.all([

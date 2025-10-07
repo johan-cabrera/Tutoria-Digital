@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // Cargar las sesiones desde el servidor JSON Server
-            const API_BASE_URL = 'http://localhost:3000';
+            
             const response = await fetch(`${API_BASE_URL}/sesiones`);
             
             if (!response.ok) {

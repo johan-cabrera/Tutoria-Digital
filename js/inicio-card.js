@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadUserSessions(userId) {
         try {
             // 1. Cargar el JSON de sesiones
-            const API_BASE_URL = 'http://localhost:3000';
+            
             const response = await fetch(`${API_BASE_URL}/sesiones`); 
             if (!response.ok) {
                 throw new Error(`Error al cargar sesiones: ${response.statusText}`);
