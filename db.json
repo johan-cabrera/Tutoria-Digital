@@ -17,6 +17,33 @@
       "contrasena": "123456",
       "foto_perfil": "user2.png",
       "rol": "docente"
+    },
+    {
+      "id": "3",
+      "nombre_completo": "Paola Garay",
+      "correo_electronico": "paolagaray@gmail.com",
+      "carnet": "GG230000",
+      "contrasena": "123456",
+      "foto_perfil": "user3.png",
+      "rol": "tutor"
+    },
+    {
+      "id": "4",
+      "nombre_completo": "Andres Rodriguez",
+      "correo_electronico": "andresrodriguez@gmail.com",
+      "carnet": "RR230000",
+      "contrasena": "123456",
+      "foto_perfil": "user4.png",
+      "rol": "tutor"
+    },
+    {
+      "id": "5",
+      "nombre_completo": "Carlos Fabricio",
+      "correo_electronico": "carlosfabricio@gmail.com",
+      "carnet": "CF230000",
+      "contrasena": "123456",
+      "foto_perfil": "user5.png",
+      "rol": "tutor"
     }
   ],
   "sesiones": [
@@ -55,7 +82,79 @@
       "docente": "Otra Persona",
       "estado": "inactiva",
       "id_tutor": 1
-    }
+    },
+    {
+    "id": "104",
+    "materia": "Estructuras de Datos",
+    "grupos": "1",
+    "estudiantes_activos": 22,
+    "dia": "Miércoles",
+    "hora": "16:00 p.m. - 18:00 p.m.",
+    "aula": "L-105",
+    "docente": "Ing. Hernández",
+    "estado": "activa",
+    "id_tutor": 3
+  },
+  {
+    "id": "105",
+    "materia": "Lenguajes de Programación",
+    "grupos": "2",
+    "estudiantes_activos": 18,
+    "dia": "Viernes",
+    "hora": "09:00 a.m. - 11:00 a.m.",
+    "aula": "C-302",
+    "docente": "Lic. Gómez",
+    "estado": "activa",
+    "id_tutor": 3
+  },
+  {
+    "id": "106",
+    "materia": "Física III",
+    "grupos": "5",
+    "estudiantes_activos": 31,
+    "dia": "Martes",
+    "hora": "10:00 a.m. - 12:00 p.m.",
+    "aula": "F-101",
+    "docente": "Dr. Fuentes",
+    "estado": "activa",
+    "id_tutor": 4
+  },
+  {
+    "id": "107",
+    "materia": "Ecuaciones Diferenciales",
+    "grupos": "3",
+    "estudiantes_activos": 25,
+    "dia": "Jueves",
+    "hora": "14:00 p.m. - 16:00 p.m.",
+    "aula": "B-305",
+    "docente": "Msc. Zúñiga",
+    "estado": "activa",
+    "id_tutor": 4
+  },
+  {
+    "id": "108",
+    "materia": "Diseño Web",
+    "grupos": "1",
+    "estudiantes_activos": 15,
+    "dia": "Lunes",
+    "hora": "17:00 p.m. - 19:00 p.m.",
+    "aula": "L-203",
+    "docente": "Ing. Alfaro",
+    "estado": "activa",
+    "id_tutor": 5
+  },
+  {
+    "id": "109",
+    "materia": "Circuitos Eléctricos",
+    "grupos": "4",
+    "estudiantes_activos": 28,
+    "dia": "Sábado",
+    "hora": "08:00 a.m. - 10:00 a.m.",
+    "aula": "G-110",
+    "docente": "Dr. Cruz",
+    "estado": "activa",
+    "id_tutor": 5
+  }
   ],
   "asistencias": [
     {
@@ -207,6 +306,186 @@
       "correo": "carlos.ruiz@mail.com",
       "telefono": "555-1234",
       "id_sesion": 102
+    },
+    {
+      "id": "1000",
+      "fecha": "2025-10-07",
+      "hora": "16:05:00",
+      "nombre_estudiante": "Ana López Pérez",
+      "carrera": "Ingeniería en Computación",
+      "correo": "ana.lopez@mail.com",
+      "telefono": "555-2001",
+      "id_sesion": 104
+    },
+    {
+      "id": "1001",
+      "fecha": "2025-10-07",
+      "hora": "16:15:00",
+      "nombre_estudiante": "José Guzmán Flores",
+      "carrera": "Ingeniería Industrial",
+      "correo": "jose.guzman@mail.com",
+      "telefono": "555-2002",
+      "id_sesion": 104
+    },
+    {
+      "id": "1002",
+      "fecha": "2025-10-07",
+      "hora": "17:00:00",
+      "nombre_estudiante": "María Elena Torres",
+      "carrera": "Licenciatura en Matemática",
+      "correo": "maria.torres@mail.com",
+      "telefono": "555-2003",
+      "id_sesion": 104
+    },
+    {
+      "id": "1003",
+      "fecha": "2025-10-07",
+      "hora": "09:02:00",
+      "nombre_estudiante": "Fabián Rivas Sol",
+      "carrera": "Ingeniería en Computación",
+      "correo": "fabian.rivas@mail.com",
+      "telefono": "555-2004",
+      "id_sesion": 105
+    },
+    {
+      "id": "1004",
+      "fecha": "2025-10-07",
+      "hora": "09:10:00",
+      "nombre_estudiante": "Lorena Castro Cruz",
+      "carrera": "Ingeniería de Sistemas",
+      "correo": "lorena.castro@mail.com",
+      "telefono": "555-2005",
+      "id_sesion": 105
+    },
+    {
+      "id": "1005",
+      "fecha": "2025-10-07",
+      "hora": "10:30:00",
+      "nombre_estudiante": "Ricardo Mena Díaz",
+      "carrera": "Ingeniería Eléctrica",
+      "correo": "ricardo.mena@mail.com",
+      "telefono": "555-2006",
+      "id_sesion": 105
+    },
+    {
+      "id": "1006",
+      "fecha": "2025-10-07",
+      "hora": "10:05:00",
+      "nombre_estudiante": "Sofía Hernández Paz",
+      "carrera": "Ingeniería Civil",
+      "correo": "sofia.hernandez@mail.com",
+      "telefono": "555-2007",
+      "id_sesion": 106
+    },
+    {
+      "id": "1007",
+      "fecha": "2025-10-07",
+      "hora": "10:15:00",
+      "nombre_estudiante": "Miguel Ángel Nieto",
+      "carrera": "Ingeniería Mecánica",
+      "correo": "miguel.nieto@mail.com",
+      "telefono": "555-2008",
+      "id_sesion": 106
+    },
+    {
+      "id": "1008",
+      "fecha": "2025-10-07",
+      "hora": "11:20:00",
+      "nombre_estudiante": "Claudia Ramos Vega",
+      "carrera": "Arquitectura",
+      "correo": "claudia.ramos@mail.com",
+      "telefono": "555-2009",
+      "id_sesion": 106
+    },
+    {
+      "id": "1009",
+      "fecha": "2025-10-07",
+      "hora": "14:00:00",
+      "nombre_estudiante": "Daniel Ortiz Reyes",
+      "carrera": "Ingeniería Industrial",
+      "correo": "daniel.ortiz@mail.com",
+      "telefono": "555-2010",
+      "id_sesion": 107
+    },
+    {
+      "id": "1010",
+      "fecha": "2025-10-07",
+      "hora": "14:08:00",
+      "nombre_estudiante": "Elena Vargas Soto",
+      "carrera": "Licenciatura en Economía",
+      "correo": "elena.vargas@mail.com",
+      "telefono": "555-2011",
+      "id_sesion": 107
+    },
+    {
+      "id": "1011",
+      "fecha": "2025-10-07",
+      "hora": "15:45:00",
+      "nombre_estudiante": "Gustavo Pineda Gil",
+      "carrera": "Ingeniería de Sistemas",
+      "correo": "gustavo.pineda@mail.com",
+      "telefono": "555-2012",
+      "id_sesion": 107
+    },
+    {
+      "id": "1012",
+      "fecha": "2025-10-07",
+      "hora": "17:10:00",
+      "nombre_estudiante": "Hilda Juárez Moya",
+      "carrera": "Diseño Gráfico",
+      "correo": "hilda.juarez@mail.com",
+      "telefono": "555-2013",
+      "id_sesion": 108
+    },
+    {
+      "id": "1013",
+      "fecha": "2025-10-07",
+      "hora": "17:30:00",
+      "nombre_estudiante": "Iván Quiroz Nuñez",
+      "carrera": "Ingeniería en Computación",
+      "correo": "ivan.quiroz@mail.com",
+      "telefono": "555-2014",
+      "id_sesion": 108
+    },
+    {
+      "id": "1014",
+      "fecha": "2025-10-07",
+      "hora": "18:25:00",
+      "nombre_estudiante": "Juana Salazar Cruz",
+      "carrera": "Marketing Digital",
+      "correo": "juana.salazar@mail.com",
+      "telefono": "555-2015",
+      "id_sesion": 108
+    },
+    {
+      "id": "1015",
+      "fecha": "2025-10-07",
+      "hora": "08:00:00",
+      "nombre_estudiante": "Karen Mata Soto",
+      "carrera": "Ingeniería Eléctrica",
+      "correo": "karen.mata@mail.com",
+      "telefono": "555-2016",
+      "id_sesion": 109
+    },
+    {
+      "id": "1016",
+      "fecha": "2025-10-07",
+      "hora": "08:05:00",
+      "nombre_estudiante": "Luis Navarro Gil",
+      "carrera": "Ingeniería Mecánica",
+      "correo": "luis.navarro@mail.com",
+      "telefono": "555-2017",
+      "id_sesion": 109
+    },
+    {
+      "id": "1017",
+      "fecha": "2025-10-07",
+      "hora": "09:30:00",
+      "nombre_estudiante": "Marta Orellana Ruiz",
+      "carrera": "Ingeniería Civil",
+      "correo": "marta.orellana@mail.com",
+      "telefono": "555-2018",
+      "id_sesion": 109
     }
   ],
   "notificaciones": [
@@ -259,6 +538,96 @@
       "estado": "entregado",
       "id_destinatario": 1,
       "id_emisor": 2
-    }
+    },
+    {
+    "id": "54",
+    "titulo": "Nueva Solicitud de Tutoría",
+    "mensaje": "Tienes 5 nuevas solicitudes de estudiantes para tu sesión de Estructuras de Datos.",
+    "fecha": "2025-10-07",
+    "hora": "19:40:00",
+    "estado": "entregado",
+    "id_destinatario": 3,
+    "id_emisor": 2
+  },
+  {
+    "id": "55",
+    "titulo": "Actualización de Políticas",
+    "mensaje": "Revisa los cambios recientes en las políticas de asistencia estudiantil.",
+    "fecha": "2025-10-06",
+    "hora": "10:15:00",
+    "estado": "visto",
+    "id_destinatario": 3,
+    "id_emisor": 2
+  },
+  {
+    "id": "56",
+    "titulo": "Confirmación de Horario",
+    "mensaje": "Tu horario para la semana ha sido aprobado. Consulta el dashboard.",
+    "fecha": "2025-10-05",
+    "hora": "17:00:00",
+    "estado": "visto",
+    "id_destinatario": 3,
+    "id_emisor": 2
+  },
+  {
+    "id": "57",
+    "titulo": "Revisión de Material",
+    "mensaje": "Se ha añadido nuevo material didáctico para la materia de Física III.",
+    "fecha": "2025-10-07",
+    "hora": "18:20:00",
+    "estado": "entregado",
+    "id_destinatario": 4,
+    "id_emisor": 2
+  },
+  {
+    "id": "58",
+    "titulo": "Alerta de Bajo Rendimiento",
+    "mensaje": "Dos estudiantes clave han faltado a tus últimas sesiones de Ecuaciones Diferenciales.",
+    "fecha": "2025-10-04",
+    "hora": "12:45:00",
+    "estado": "visto",
+    "id_destinatario": 4,
+    "id_emisor": 2
+  },
+  {
+    "id": "59",
+    "titulo": "Mantenimiento de Sistema",
+    "mensaje": "El sistema estará inactivo de 02:00 a 04:00 el día jueves.",
+    "fecha": "2025-10-03",
+    "hora": "09:00:00",
+    "estado": "visto",
+    "id_destinatario": 4,
+    "id_emisor": 2
+  },
+  {
+    "id": "60",
+    "titulo": "Recordatorio de Sesión",
+    "mensaje": "Tu sesión de Diseño Web comienza en 30 minutos en el aula L-203.",
+    "fecha": "2025-10-07",
+    "hora": "16:30:00",
+    "estado": "entregado",
+    "id_destinatario": 5,
+    "id_emisor": 2
+  },
+  {
+    "id": "61",
+    "titulo": "Firma de Documentos",
+    "mensaje": "Pendiente de firma el acuerdo de confidencialidad en tu perfil.",
+    "fecha": "2025-10-06",
+    "hora": "14:00:00",
+    "estado": "visto",
+    "id_destinatario": 5,
+    "id_emisor": 2
+  },
+  {
+    "id": "62",
+    "titulo": "Actualización de Foto",
+    "mensaje": "Tu foto de perfil ha sido aprobada por el administrador.",
+    "fecha": "2025-10-05",
+    "hora": "11:00:00",
+    "estado": "visto",
+    "id_destinatario": 5,
+    "id_emisor": 2
+  }
   ]
 }

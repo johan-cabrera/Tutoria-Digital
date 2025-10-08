@@ -166,8 +166,8 @@ async function loadUserNotifications() {
 
             // 📢 ESTILO: 'entregado' es el fondo blanco/visible, 'visto' es el fondo gris/sutil
             const itemClasses = isUnread ? 
-                'bg-white hover:bg-gray-50' : // Sin ver (más visible)
-                'bg-gray-50 hover:bg-gray-100'; // Visto (sutil)
+                'bg-white' : // Sin ver (más visible)
+                'bg-gray-50'; // Visto (sutil)
 
             const notificationHtml = `
                 <div class="${itemClasses} flex items-start justify-between border-b p-4 md:px-6 last:border-b-0 transition-colors">
