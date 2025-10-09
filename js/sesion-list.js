@@ -1,7 +1,7 @@
 // ../js/sesion-list.js
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    
     const SESSION_ID_STORAGE_KEY = 'currentSessionId'; 
     const attendanceBody = document.getElementById('attendance-body');
     const prevButton = document.getElementById('prev-page');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Variables de estado de la paginación
     let currentPage = 1;
     const recordsPerPage = 5; // 📢 Máximo de registros por página
-    let allSessionAttendance = []; // Guardará todos los registros filtrados
+    let allSessionAttendance = []; // Guardará todos los registros FILTRADOS Y COMBINADOS
 
     if (!attendanceBody || !sessionId) {
         if (attendanceBody) {
@@ -27,16 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (paginationControls) paginationControls.style.display = 'none';
 
     /**
-     * Genera la fila HTML para un registro de asistencia. (Mantenemos esta función)
+     * Genera la fila HTML para un registro de asistencia combinado (asistencia + usuario).
      */
     function createAttendanceRow(record) {
         return `
             <tr class="hover:bg-gray-50">
                 <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.fecha}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.hora}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.nombre_estudiante}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.nombre_completo}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.carrera}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.correo}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.correo_electronico}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-text-dark">${record.telefono}</td>
             </tr>
         `;
@@ -95,26 +95,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /**
-     * Carga todas las asistencias, las filtra, las guarda y luego inicia la paginación.
+     * Carga las asistencias, los datos de usuario, los combina, filtra y luego inicia la paginación.
      */
     async function loadAttendanceHistory() {
         attendanceBody.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-primary-blue">Cargando historial...</td></tr>';
         if (paginationControls) paginationControls.style.display = 'none';
 
         try {
-            // 1. Obtener todos los registros de asistencia
+            // 1. Obtener ASISTENCIAS y USUARIOS en paralelo
+            const [attendanceResponse, usersResponse] = await Promise.all([
+                fetch(`${API_BASE_URL}/asistencias`),
+                fetch(`${API_BASE_URL}/usuarios`)
+            ]);
             
-            const response = await fetch(`${API_BASE_URL}/asistencias`);
-            
-            if (!response.ok) {
-                throw new Error("Error de red al obtener el historial de asistencias.");
+            if (!attendanceResponse.ok || !usersResponse.ok) {
+                throw new Error("Error de red al obtener asistencias o usuarios.");
             }
             
-            const allAttendance = await response.json();
+            const allAttendance = await attendanceResponse.json();
+            const allUsers = await usersResponse.json();
+            
+            // Crear un mapa de usuarios para una búsqueda rápida (O(1))
+            const userMap = new Map(allUsers.map(user => [user.id, user]));
 
-            // 2. Filtrar las asistencias por el id_sesion actual y guardarlas
-            allSessionAttendance = allAttendance.filter(record => record.id_sesion == sessionId);
-
+            // 2. Filtrar asistencias por el id_sesion actual y COMBINAR con datos del usuario
+            allSessionAttendance = allAttendance
+                .filter(record => record.id_sesion == sessionId)
+                .map(record => {
+                    const user = userMap.get(String(record.id_usuario));
+                    // Combina los campos de asistencia (fecha, hora, id_sesion) con los campos del usuario
+                    return user ? { 
+                        ...record, 
+                        nombre_completo: user.nombre_completo,
+                        carrera: user.carrera,
+                        correo_electronico: user.correo_electronico,
+                        telefono: user.telefono
+                    } : record; // Si no encuentra usuario, devuelve solo el registro de asistencia.
+                })
+                .filter(record => record.nombre_completo); // Asegura que solo se muestren registros con datos de usuario
+            
             if (allSessionAttendance.length === 0) {
                 attendanceBody.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-text-light">No hay registros de asistencia para esta sesión.</td></tr>';
                 return;

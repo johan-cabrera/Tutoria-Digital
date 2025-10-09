@@ -78,8 +78,16 @@
         </section>
 
         <section class="">
-            <h2 class="text-xl text-text-dark mb-6 font-normal text-text-light">Historial de asistencias</h2>
-
+            <div class="flex justify-between items-center mb-6">
+        
+                <h2 class="text-xl text-text-dark font-normal text-text-light">Historial de asistencias</h2>
+                
+                <button id="print-list-btn" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition flex items-center shadow-md">
+                    <i class="ti ti-printer text-lg mr-2"></i> 
+                    Imprimir Lista (PDF)
+                </button>
+                
+            </div>
             <div class="bg-white rounded-lg shadow-md overflow-x-auto border">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-indigo-700"> <tr>
@@ -134,9 +142,12 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/sesion-data.js"></script>
     <script src="../js/sesion-list.js"></script>
+    <script src="../js/sesion-documento.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

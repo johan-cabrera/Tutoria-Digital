@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoría Digital - Dashboard</title>
+    <title>Tutoría Digital - Registrar Asistencia</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-</head>
+    </head>
 <body class="bg-gray-50 font-sans">
 
     <header class="bg-gray-50 flex justify-between items-center px-8 py-4 sticky top-0 z-10">
@@ -18,64 +18,60 @@
             <a href="inicio.html" class="hover:text-primary-blue">Inicio</a>
             <a href="sesiones.html" class="hover:text-primary-blue">Sesiones</a>
             <a href="lista.html" class="hover:text-primary-blue">Lista</a>
-            <a href="notificaciones.html" class="relative text-primary-blue font-medium">
+            <a href="notificaciones.html" class="relative hover:text-primary-blue">
                 Notificaciones
-                <span id="desktop-notification-count" class="absolute top-0 right-[-20px] w-5 h-5 bg-accent-red text-white text-xs font-semibold rounded-full flex items-center justify-center border-2 border-white" style="display: none;">1</span>
+                <span id="desktop-notification-count" class="absolute top-0 right-[-20px] w-5 h-5 bg-accent-red text-white text-xs font-semibold rounded-full flex items-center justify-center border-2 border-white" style="display: none;">0</span>
             </a>
         </nav>
         
         <div id="profileMenuWrapper" class="relative">
-    
             <div id="profileToggle" class="flex items-center space-x-2 cursor-pointer p-1 rounded-full hover:bg-gray-100 transition-colors">
                 <div id="profilePictureContainer" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                     <i class="ti ti-user text-gray-500 text-lg"></i> 
                 </div>
                 
                 <div class="hidden sm:block text-right text-sm leading-tight">
-                    <p id="current-user" class="font-semibold text-text-dark">Nombre completo</p>
-                    <p id="user-rol" class="text-text-dark text-xs">Rolr</p>
+                    <p id="current-user" class="font-semibold text-text-dark">Estudiante</p>
+                    <p id="user-rol" class="text-text-dark text-xs">Rol</p>
                 </div>
                 
                 <i class="ti ti-chevron-down text-text-dark ml-1 text-base transition-transform duration-200"></i>
             </div>
             
-            <div id="logoutMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-md py-1 border z-20 hidden hover:bg-gray-200">
-                <a id="logoutButton" href="#" class="block px-4 py-2 text-sm text-red-600 transition-colors">
+            <div id="logoutMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-md py-1 border z-20 hidden">
+                <a id="logoutButton" href="#" class="block px-4 py-2 text-sm text-red-600 transition-colors hover:bg-gray-100">
                     <i class="ti ti-logout text-base mr-2"></i>
                     Cerrar Sesión
                 </a>
             </div>
-                
         </div>
     </header>
 
-    <main class="p-4 pb-20 md:p-12 lg:p-16">
+    <main class="flex items-center justify-center min-h-[calc(100vh-64px)] p-8">
         
-        <div class="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-sm border">
-    
-        <div class="flex items-center justify-between px-4 py-3 md:px-6 md:py-4 border-b border-gray-100">
-            <div class="text-center">
-                <span class="text-xl md:text-2xl text-text-dark">Notificaciones</span>
-            </div>
+        <div id="checkin-status" 
+            class="flex flex-col items-center justify-center p-12 bg-white shadow-md rounded-2xl w-full max-w-lg transition-all duration-500 ease-in-out border">
             
-            <button 
-                id="markAllAsSeenButton"                
-                class="text-primary-blue text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center space-x-1 hover:bg-blue-50"
-                style="display: none;">                
-                <i class="ti ti-checks text-lg"></i>                
-                <span>Marcar todo como visto</span>
-            </button>
+            <div id="status-icon" class="text-6xl mb-6 flex items-center justify-center h-24 w-24">
+                <svg id="success-svg" class="w-full h-full text-green-600" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <svg id="loading-spinner" class="animate-spin w-16 h-16 text-primary-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </div> 
+            
+            <h1 id="status-title" class="text-3xl font-extrabold text-text-dark mb-2 text-center">Procesando Asistencia</h1>
+            <p id="status-message" class="text-lg text-text-light text-center">Verificando sesión y registrando su entrada...</p>
         </div>
-
-        <div id="notifications-list">
-        </div>
-    </div>
+        
     </main>
 
     <nav class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 md:hidden flex justify-around items-center h-16 shadow-lg">
         <a href="inicio.html" class="flex flex-col items-center text-text-dark hover:text-primary-blue transition-colors">
             <i class="ti ti-home text-2xl"></i>
-            <span class="text-xs font-medium mt-1">Inicio</span>
+            <span class="text-xs mt-1">Inicio</span>
         </a>
         
         <a href="sesiones.html" class="flex flex-col items-center text-text-dark hover:text-primary-blue transition-colors">
@@ -88,19 +84,18 @@
             <span class="text-xs mt-1">Lista</span>
         </a>
         
-        <a href="notificaciones.html" class="relative flex flex-col items-center text-primary-blue">
+        <a href="notificaciones.html" class="relative flex flex-col items-center text-text-dark hover:text-primary-blue transition-colors">
             <i class="ti ti-bell text-2xl"></i>
             <span class="text-xs mt-1">Notif.</span>
-            <span id="mobile-notification-count" class="absolute top-0 left-4 w-4 h-4 bg-accent-red text-white text-[10px] font-semibold rounded-full flex items-center justify-center border border-white" style="display: none;">1</span>
+            <span id="mobile-notification-count" class="absolute top-0 left-4 w-4 h-4 bg-accent-red text-white text-[10px] font-semibold rounded-full flex items-center justify-center border border-white" style="display: none;">0</span>
         </a>
     </nav>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="../js/navbar.js"></script>
-    <script src="../js/notificaciones.js"></script>
     <script src="../js/main.js"></script> 
+    <script src="../js/checkin.js"></script> 
     
 </body>
 </html>
