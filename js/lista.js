@@ -1,7 +1,7 @@
 // ../js/qr-generator.js
 
 // --- CONFIGURACIÓN BASE ---
-const CHECKIN_BASE_URL = 'https://tutoria-digital-1.onrender.com/checkin.html'; // 
+const CHECKIN_BASE_URL = 'https://tutoria-digital-1.onrender.com/pages/checkin.html'; // 
 const SESSION_STORAGE_KEY = 'currentUserSession';
 
 
