@@ -20,7 +20,7 @@
       "carrera": "Ingeniería en CC",
       "telefono": "555-901",
       "foto_perfil": "user2.png",
-      "rol": "profesor"
+      "rol": "administrador"
     },
     {
       "id": "3",
@@ -51,7 +51,7 @@
       "carnet": "CF230000",
       "contrasena": "123456",
       "carrera": "Ingeniería en CC",
-      "telefo": "555-904",
+      "telefono": "555-904",
       "foto_perfil": "user5.png",
       "rol": "tutor"
     },
@@ -73,9 +73,229 @@
       "carnet": "RR230000",
       "contrasena": "123456",
       "carrera": "Ingeniería en CC",
-      "telefo": "555-904",
+      "telefono": "555-904",
       "foto_perfil": "userm.png",
       "rol": "tutor"
+    },
+    {
+      "id": "8",
+      "nombre_completo": "Laura Patricia Menjívar",
+      "correo_electronico": "laura.menjivar@estudiante.com",
+      "carnet": "LM240001",
+      "contrasena": "123456",
+      "carrera": "Diseño Gráfico",
+      "telefono": "555-910",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "9",
+      "nombre_completo": "Ricardo José Flores",
+      "correo_electronico": "ricardo.flores@estudiante.com",
+      "carnet": "RF240002",
+      "contrasena": "123456",
+      "carrera": "Arquitectura",
+      "telefono": "555-911",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "10",
+      "nombre_completo": "Sofía Alejandra Pérez",
+      "correo_electronico": "sofia.perez@estudiante.com",
+      "carnet": "SP240003",
+      "contrasena": "123456",
+      "carrera": "Ingeniería Civil",
+      "telefono": "555-912",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "11",
+      "nombre_completo": "Javier Ernesto Cruz",
+      "correo_electronico": "javier.cruz@estudiante.com",
+      "carnet": "JC240004",
+      "contrasena": "123456",
+      "carrera": "Comunicaciones",
+      "telefono": "555-913",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "12",
+      "nombre_completo": "Karla María Vásquez",
+      "correo_electronico": "karla.vasquez@estudiante.com",
+      "carnet": "KV240005",
+      "contrasena": "123456",
+      "carrera": "Medicina",
+      "telefono": "555-914",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "13",
+      "nombre_completo": "Fernando Antonio López",
+      "correo_electronico": "fernando.lopez@estudiante.com",
+      "carnet": "FL240006",
+      "contrasena": "123456",
+      "carrera": "Ingeniería industrial",
+      "telefono": "555-915",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "14",
+      "nombre_completo": "Gabriela Elizabeth Rivas",
+      "correo_electronico": "gabriela.rivas@estudiante.com",
+      "carnet": "GR240007",
+      "contrasena": "123456",
+      "carrera": "Diseño Gráfico",
+      "telefono": "555-916",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "15",
+      "nombre_completo": "Manuel Alejandro Gómez",
+      "correo_electronico": "manuel.gomez@estudiante.com",
+      "carnet": "MG240008",
+      "contrasena": "123456",
+      "carrera": "Arquitectura",
+      "telefono": "555-917",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "16",
+      "nombre_completo": "Andrea Nicole Herrera",
+      "correo_electronico": "andrea.herrera@estudiante.com",
+      "carnet": "AH240009",
+      "contrasena": "123456",
+      "carrera": "Ingeniería Civil",
+      "telefono": "555-918",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "17",
+      "nombre_completo": "Esteban David Rivera",
+      "correo_electronico": "esteban.rivera@estudiante.com",
+      "carnet": "ER240010",
+      "contrasena": "123456",
+      "carrera": "Comunicaciones",
+      "telefono": "555-919",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "18",
+      "nombre_completo": "Valeria Michelle Castro",
+      "correo_electronico": "valeria.castro@estudiante.com",
+      "carnet": "VC240011",
+      "contrasena": "123456",
+      "carrera": "Medicina",
+      "telefono": "555-920",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "19",
+      "nombre_completo": "Héctor Mauricio Sosa",
+      "correo_electronico": "hector.sosa@estudiante.com",
+      "carnet": "HS240012",
+      "contrasena": "123456",
+      "carrera": "Ingeniería en CC",
+      "telefono": "555-921",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "20",
+      "nombre_completo": "Daniela Fernanda Chávez",
+      "correo_electronico": "daniela.chavez@estudiante.com",
+      "carnet": "DC240013",
+      "contrasena": "123456",
+      "carrera": "Ingeniería industrial",
+      "telefono": "555-922",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "21",
+      "nombre_completo": "Camilo Enrique Mendoza",
+      "correo_electronico": "camilo.mendoza@estudiante.com",
+      "carnet": "CM240014",
+      "contrasena": "123456",
+      "carrera": "Diseño Gráfico",
+      "telefono": "555-923",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "22",
+      "nombre_completo": "Evelyn Beatriz Gámez",
+      "correo_electronico": "evelyn.gamez@estudiante.com",
+      "carnet": "EG240015",
+      "contrasena": "123456",
+      "carrera": "Arquitectura",
+      "telefono": "555-924",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "23",
+      "nombre_completo": "José Benjamín Ayala",
+      "correo_electronico": "jose.ayala@estudiante.com",
+      "carnet": "JA240016",
+      "contrasena": "123456",
+      "carrera": "Ingeniería Civil",
+      "telefono": "555-925",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "24",
+      "nombre_completo": "Alejandra Carolina Chávez",
+      "correo_electronico": "alejandra.chavez@estudiante.com",
+      "carnet": "AC240017",
+      "contrasena": "123456",
+      "carrera": "Comunicaciones",
+      "telefono": "555-926",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "25",
+      "nombre_completo": "Fabián René Quintanilla",
+      "correo_electronico": "fabian.quintanilla@estudiante.com",
+      "carnet": "FQ240018",
+      "contrasena": "123456",
+      "carrera": "Medicina",
+      "telefono": "555-927",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "26",
+      "nombre_completo": "Adriana Belén Alas",
+      "correo_electronico": "adriana.alas@estudiante.com",
+      "carnet": "AB240019",
+      "contrasena": "123456",
+      "carrera": "Ingeniería en CC",
+      "telefono": "555-928",
+      "foto_perfil": "userf.png",
+      "rol": "estudiante"
+    },
+    {
+      "id": "27",
+      "nombre_completo": "Oscar Vladimir Fuentes",
+      "correo_electronico": "oscar.fuentes@estudiante.com",
+      "carnet": "OF240020",
+      "contrasena": "123456",
+      "carrera": "Ingeniería industrial",
+      "telefono": "555-929",
+      "foto_perfil": "userm.png",
+      "rol": "estudiante"
     }
   ],
   "sesiones": [
@@ -225,293 +445,7 @@
     }
   ],
   "asistencias": [
-    {
-      "id": "1",
-      "fecha": "2025-09-01",
-      "hora": "13:05:00",
-      "id_usuario": 1,
-      "id_sesion": 1
-    },
-    {
-      "id": "2",
-      "fecha": "2025-09-02",
-      "hora": "13:15:00",
-      "id_usuario": 2,
-      "id_sesion": 1
-    },
-    {
-      "id": "3",
-      "fecha": "2025-09-03",
-      "hora": "14:00:00",
-      "id_usuario": 3,
-      "id_sesion": 1
-    },
-    {
-      "id": "4",
-      "fecha": "2025-09-04",
-      "hora": "10:05:00",
-      "id_usuario": 4,
-      "id_sesion": 2
-    },
-    {
-      "id": "5",
-      "fecha": "2025-09-05",
-      "hora": "10:25:00",
-      "id_usuario": 5,
-      "id_sesion": 2
-    },
-    {
-      "id": "6",
-      "fecha": "2025-09-06",
-      "hora": "11:05:00",
-      "id_usuario": 1,
-      "id_sesion": 2
-    },
-    {
-      "id": "7",
-      "fecha": "2025-09-17",
-      "hora": "14:10:00",
-      "id_usuario": 2,
-      "id_sesion": 3
-    },
-    {
-      "id": "8",
-      "fecha": "2025-09-18",
-      "hora": "14:35:00",
-      "id_usuario": 3,
-      "id_sesion": 3
-    },
-    {
-      "id": "9",
-      "fecha": "2025-09-19",
-      "hora": "15:05:00",
-      "id_usuario": 4,
-      "id_sesion": 3
-    },
-    {
-      "id": "10",
-      "fecha": "2025-09-01",
-      "hora": "16:01:00",
-      "id_usuario": 5,
-      "id_sesion": 4
-    },
-    {
-      "id": "11",
-      "fecha": "2025-09-02",
-      "hora": "16:10:00",
-      "id_usuario": 1,
-      "id_sesion": 4
-    },
-    {
-      "id": "12",
-      "fecha": "2025-09-03",
-      "hora": "17:00:00",
-      "id_usuario": 2,
-      "id_sesion": 4
-    },
-    {
-      "id": "13",
-      "fecha": "2025-09-14",
-      "hora": "09:05:00",
-      "id_usuario": 3,
-      "id_sesion": 5
-    },
-    {
-      "id": "14",
-      "fecha": "2025-09-15",
-      "hora": "09:20:00",
-      "id_usuario": 4,
-      "id_sesion": 5
-    },
-    {
-      "id": "15",
-      "fecha": "2025-09-16",
-      "hora": "10:15:00",
-      "id_usuario": 5,
-      "id_sesion": 5
-    },
-    {
-      "id": "16",
-      "fecha": "2025-09-07",
-      "hora": "13:00:00",
-      "id_usuario": 1,
-      "id_sesion": 6
-    },
-    {
-      "id": "17",
-      "fecha": "2025-09-08",
-      "hora": "13:08:00",
-      "id_usuario": 2,
-      "id_sesion": 6
-    },
-    {
-      "id": "18",
-      "fecha": "2025-09-09",
-      "hora": "14:10:00",
-      "id_usuario": 3,
-      "id_sesion": 6
-    },
-    {
-      "id": "19",
-      "fecha": "2025-09-01",
-      "hora": "10:00:00",
-      "id_usuario": 4,
-      "id_sesion": 7
-    },
-    {
-      "id": "20",
-      "fecha": "2025-09-02",
-      "hora": "10:15:00",
-      "id_usuario": 5,
-      "id_sesion": 7
-    },
-    {
-      "id": "21",
-      "fecha": "2025-09-03",
-      "hora": "11:00:00",
-      "id_usuario": 1,
-      "id_sesion": 7
-    },
-    {
-      "id": "22",
-      "fecha": "2025-09-04",
-      "hora": "14:05:00",
-      "id_usuario": 2,
-      "id_sesion": 8
-    },
-    {
-      "id": "23",
-      "fecha": "2025-09-05",
-      "hora": "14:20:00",
-      "id_usuario": 3,
-      "id_sesion": 8
-    },
-    {
-      "id": "24",
-      "fecha": "2025-09-06",
-      "hora": "15:00:00",
-      "id_usuario": 4,
-      "id_sesion": 8
-    },
-    {
-      "id": "25",
-      "fecha": "2025-09-07",
-      "hora": "16:00:00",
-      "id_usuario": 5,
-      "id_sesion": 9
-    },
-    {
-      "id": "26",
-      "fecha": "2025-09-08",
-      "hora": "16:15:00",
-      "id_usuario": 1,
-      "id_sesion": 9
-    },
-    {
-      "id": "27",
-      "fecha": "2025-09-09",
-      "hora": "17:05:00",
-      "id_usuario": 2,
-      "id_sesion": 9
-    },
-    {
-      "id": "28",
-      "fecha": "2025-09-01",
-      "hora": "17:00:00",
-      "id_usuario": 3,
-      "id_sesion": 10
-    },
-    {
-      "id": "29",
-      "fecha": "2025-09-02",
-      "hora": "17:25:00",
-      "id_usuario": 4,
-      "id_sesion": 10
-    },
-    {
-      "id": "30",
-      "fecha": "2025-09-03",
-      "hora": "18:05:00",
-      "id_usuario": 5,
-      "id_sesion": 10
-    },
-    {
-      "id": "31",
-      "fecha": "2025-09-04",
-      "hora": "08:00:00",
-      "id_usuario": 1,
-      "id_sesion": 11
-    },
-    {
-      "id": "32",
-      "fecha": "2025-09-05",
-      "hora": "08:15:00",
-      "id_usuario": 2,
-      "id_sesion": 11
-    },
-    {
-      "id": "33",
-      "fecha": "2025-09-06",
-      "hora": "09:00:00",
-      "id_usuario": 3,
-      "id_sesion": 11
-    },
-    {
-      "id": "34",
-      "fecha": "2025-09-07",
-      "hora": "18:05:00",
-      "id_usuario": 4,
-      "id_sesion": 12
-    },
-    {
-      "id": "35",
-      "fecha": "2025-09-08",
-      "hora": "18:30:00",
-      "id_usuario": 5,
-      "id_sesion": 12
-    },
-    {
-      "id": "36",
-      "fecha": "2025-09-09",
-      "hora": "19:15:00",
-      "id_usuario": 1,
-      "id_sesion": 12
-    },
-    {
-      "id": "4d42",
-      "fecha": "2025-10-07",
-      "hora": "17:31:22",
-      "id_usuario": "2",
-      "id_sesion": 1
-    },
-    {
-      "id": "04b6",
-      "fecha": "2025-10-08",
-      "hora": "17:31:56",
-      "id_usuario": "2",
-      "id_sesion": 2
-    },
-    {
-      "id": "c692",
-      "fecha": "2025-10-07",
-      "hora": "18:15:27",
-      "id_usuario": "4",
-      "id_sesion": 1
-    },
-    {
-      "id": "6c50",
-      "fecha": "2025-10-09",
-      "hora": "18:16:11",
-      "id_usuario": "4",
-      "id_sesion": 1
-    },
-    {
-      "id": "64f5",
-      "fecha": "2025-10-09",
-      "hora": "19:00:07",
-      "id_usuario": "3",
-      "id_sesion": 1
-    }
+
   ],
   "notificaciones": [
     {

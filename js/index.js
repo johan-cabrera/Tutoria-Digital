@@ -54,7 +54,6 @@ async function fetchUsers() {
 }
 
 // --- FUNCIÓN PRINCIPAL DE LOGÍN ---
-
 /**
  * Maneja el evento de envío del formulario de inicio de sesión.
  * Valida las credenciales y maneja la redirección condicional.
@@ -94,20 +93,29 @@ const handleLogin = async (event) => {
         
         localStorage.setItem('currentUserSession', JSON.stringify(sessionData));
         
-        displayMessage(`Inicio de sesión exitoso. Redirigiendo...`, 'success');
+        displayMessage(`Inicio de sesión exitoso. Redirigiendo como ${userFound.rol}...`, 'success');
         
-        // 2. Lógica de Redirección Condicional
-        const redirectUrl = localStorage.getItem(REDIRECT_STORAGE_KEY);
+        // 2. Lógica de Redirección Condicional (MODIFICADA)
         
         setTimeout(() => {
+            const redirectUrl = localStorage.getItem(REDIRECT_STORAGE_KEY);
+            
             if (redirectUrl) {
-                // REDIRECCIÓN A CHECK-IN: Si la clave existe, redirigimos ahí.
+                // Caso 1: REDIRECCIÓN PENDIENTE (e.g., Check-in). Tiene prioridad.
                 window.location.href = redirectUrl;
-                localStorage.removeItem(REDIRECT_STORAGE_KEY); // Limpiar clave inmediatamente
+                localStorage.removeItem(REDIRECT_STORAGE_KEY);
             } else {
-                // REDIRECCIÓN NORMAL: Si no hay clave, vamos a la página de inicio.
-                // La ruta es relativa a index.html: 'pages/inicio.html'
-                window.location.href = 'pages/inicio.html'; 
+                // Caso 2: REDIRECCIÓN BASADA EN ROL.
+                if (userFound.rol === 'administrador') {
+                    // Si es administrador, va a la vista de administración.
+                    window.location.href = 'pages/admin-inicio.html';
+                } else if (userFound.rol === 'tutor' || userFound.rol === 'estudiante') {
+                    // Si es tutor o estudiante, va a la vista de inicio general.
+                    window.location.href = 'pages/inicio.html';
+                } else {
+                    // Fallback por si el rol no es reconocido
+                    window.location.href = 'pages/inicio.html'; 
+                }
             }
         }, 1000); // Pequeño retraso para que el mensaje de éxito se vea
 
